@@ -16,14 +16,6 @@
     "test:coverage": "jest --coverage",
     "analyze": "nuxt build --analyze"
   },
-  "lint-staged": {
-    "*.{js,vue}": "eslint"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/dotenv": "^1.4.0",
