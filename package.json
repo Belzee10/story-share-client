@@ -11,7 +11,8 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "format": "prettier \"**/*.+(js|vue|jsx|json|css|scss|md)\" --write --ignore-path .gitignore .",
-    "test": "jest"
+    "test": "jest",
+    "analyze": "nuxt build --analyze"
   },
   "lint-staged": {
     "*.{js,vue}": "eslint"
