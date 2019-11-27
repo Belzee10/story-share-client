@@ -2,7 +2,8 @@ export default {
   default: {
     primary: '#263238',
     secondary: '#37474F',
-    anchor: '#CFD8DC'
+    anchor: '#CFD8DC',
+    accent: '#dee2e6'
   },
   indigo: {
     primary: '#3F51B5',
