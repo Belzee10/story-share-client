@@ -12,10 +12,13 @@
         </v-col>
         <v-col cols="7" class="py-0 d-flex flex-column">
           <span class="date accent--text text--darken-2">{{ formatDate }}</span>
-          <h3 class="title text-capitalize">{{ title }}</h3>
+          <h3 class="title">{{ title | capitalizeFirstLetter }}</h3>
           <p class="accent--text text--darken-4 font-weight-light content">
             {{ content | truncate }}
           </p>
+          <div class="mt-auto d-flex">
+            <Author :name="`${author.name} ${author.lastName}`" />
+          </div>
         </v-col>
       </v-row>
     </v-container>
@@ -24,8 +27,11 @@
 
 <script>
 import dayjs from 'dayjs';
+import Author from '~/components/Story/Author';
+
 export default {
   name: 'StoryCard',
+  components: { Author },
   props: {
     title: {
       type: String,

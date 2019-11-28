@@ -4,7 +4,10 @@ import index from '../index';
 import { createWrapper } from '~/config/tests.helpers';
 
 describe('Page index.vue', () => {
-  const stories = provokeArray();
+  const stories = provokeArray(3, i => ({
+    id: i,
+    author: { name: `Name: ${i}` }
+  }));
   const store = new Store({
     state: {
       Stories: {
@@ -17,8 +20,5 @@ describe('Page index.vue', () => {
     expect(wrapper.findAll('.story-card')).toHaveLength(stories.length);
   });
 
-  // test('should render correctly', () => {
-  //   const wrapper = createWrapper(Navbar, { store });
-  //   expect(wrapper.element).toMatchSnapshot();
-  // });
+  test.todo('should render correctly');
 });
