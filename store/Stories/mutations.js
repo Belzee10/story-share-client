@@ -2,7 +2,9 @@ import {
   SET_STORIES,
   SET_ERROR,
   SET_POPULAR_STORIES,
-  SET_POPULAR_ERROR
+  SET_POPULAR_ERROR,
+  SET_STORY,
+  SET_STORY_ERROR
 } from './mutationTypes';
 
 export default {
@@ -20,5 +22,13 @@ export default {
 
   [SET_POPULAR_ERROR]: (state, { error }) => {
     state.errorPopular = error;
+  },
+
+  [SET_STORY]: (state, { story }) => {
+    state.story = story;
+  },
+
+  [SET_STORY_ERROR]: (state, { error }) => {
+    state.errorStory = error;
   }
 };

@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex align-end">
+  <div class="d-flex align-center">
     <div>
       <v-img
         :src="avatar || require('~/assets/images/no-image.jpg')"

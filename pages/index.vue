@@ -4,7 +4,7 @@
       <v-col cols="8">
         <List :items="stories" :cols="12">
           <template v-slot:default="{ itemProps }">
-            <StoryCard v-bind="itemProps" />
+            <StoryCard v-bind="itemProps" @story-card-click="goToStory" />
           </template>
         </List>
       </v-col>
@@ -14,10 +14,8 @@
           <List :items="popularStories" :cols="12">
             <template v-slot:default="{ itemProps }">
               <PopularStoryCard
-                :title="itemProps.title"
-                :image="itemProps.image"
-                :author="itemProps.author"
-                :content="itemProps.content"
+                v-bind="itemProps"
+                @popular-story-card-click="goToStory"
               />
             </template>
           </List>
@@ -44,7 +42,13 @@ export default {
     this.getPopularStories();
   },
   methods: {
-    ...mapActions('Stories', ['getStories', 'getPopularStories'])
+    ...mapActions('Stories', ['getStories', 'getPopularStories']),
+    goToStory(id) {
+      this.$router.push({
+        name: 'stories-id',
+        params: { id }
+      });
+    }
   }
 };
 </script>

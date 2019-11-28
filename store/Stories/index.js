@@ -5,7 +5,9 @@ const state = () => ({
   stories: [],
   error: false,
   popularStories: [],
-  errorPopular: false
+  errorPopular: false,
+  story: null,
+  errorStory: false
 });
 
 export default {

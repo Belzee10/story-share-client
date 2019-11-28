@@ -3,7 +3,9 @@ import {
   SET_STORIES,
   SET_ERROR,
   SET_POPULAR_STORIES,
-  SET_POPULAR_ERROR
+  SET_POPULAR_ERROR,
+  SET_STORY,
+  SET_STORY_ERROR
 } from './mutationTypes';
 import { transformResponse } from '~/helpers';
 
@@ -39,6 +41,23 @@ export default {
         error: true
       });
       logger.error(`STORIES_POPULAR: **${error}**`);
+    }
+  },
+
+  async getStory({ commit }, id) {
+    try {
+      const { result } = await this.$axios.$get(`/stories/${id}`);
+      const story = transformResponse(result);
+      commit({
+        type: SET_STORY,
+        story
+      });
+    } catch (error) {
+      commit({
+        type: SET_STORY_ERROR,
+        error: true
+      });
+      logger.error(`STORIES_SINGLE: **${error}**`);
     }
   }
 };

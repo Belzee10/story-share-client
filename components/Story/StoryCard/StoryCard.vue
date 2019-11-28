@@ -1,5 +1,5 @@
 <template>
-  <v-card flat class="story-card">
+  <v-card @click="$emit('story-card-click', id)" flat class="story-card">
     <v-container class="">
       <v-row>
         <v-col cols="5" class="py-0">
@@ -21,7 +21,15 @@
           <div class="mt-auto d-flex">
             <Author :name="`${author.name} ${author.lastName}`" class="mr-2" />
             <Like v-if="likes > 0" :likes="likes" />
-            <v-btn depressed small color="primary" class="ml-auto"> Save</v-btn>
+            <v-btn
+              @click.stop="$emit('story-card-save')"
+              depressed
+              small
+              color="primary"
+              class="ml-auto"
+            >
+              Save</v-btn
+            >
           </div>
         </v-col>
       </v-row>
@@ -38,6 +46,10 @@ export default {
   name: 'StoryCard',
   components: { Author, Like },
   props: {
+    id: {
+      type: String,
+      default: ''
+    },
     title: {
       type: String,
       default: ''

@@ -1,5 +1,9 @@
 <template>
-  <v-card flat class="story-card transparent">
+  <v-card
+    @click="$emit('popular-story-card-click', id)"
+    flat
+    class="story-card transparent"
+  >
     <v-container class="pa-0">
       <v-row>
         <v-col cols="5" class="py-0">
@@ -31,6 +35,10 @@ export default {
   name: 'PopularStoryCard',
   components: { Author },
   props: {
+    id: {
+      type: String,
+      default: ''
+    },
     title: {
       type: String,
       default: ''

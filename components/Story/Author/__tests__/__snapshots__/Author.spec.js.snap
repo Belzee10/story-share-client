@@ -2,7 +2,7 @@
 
 exports[`Author.vue should render correctly 1`] = `
 <div
-  class="d-flex align-end"
+  class="d-flex align-center"
 >
   <div>
     <div
