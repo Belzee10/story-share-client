@@ -13,7 +13,8 @@ module.exports = {
   collectCoverageFrom: [
     '<rootDir>/components/**/*.vue',
     '<rootDir>/pages/**/*.vue',
-    '<rootDir>/store/**/*.js'
+    '<rootDir>/store/**/*.js',
+    '<rootDir>/helpers/**/*.js'
   ],
   verbose: true,
   setupFiles: ['./config/tests.setup.js']
