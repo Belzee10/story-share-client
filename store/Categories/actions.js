@@ -5,7 +5,7 @@ import { transformResponse } from '~/helpers';
 export default {
   async getCategories({ commit }) {
     try {
-      const { result } = await this.$categoriesRepository.get();
+      const { result } = await this.$axios.$get('/categories');
       const categories = result.map(item => transformResponse(item));
       commit({
         type: SET_CATEGORIES,
