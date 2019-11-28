@@ -9,7 +9,7 @@
           ></v-img>
         </v-col>
         <v-col cols="4" class="d-flex justify-end align-center">
-          <v-btn color="primary" class="text-capitalize">
+          <v-btn depressed color="primary" class="text-capitalize">
             Get Started
           </v-btn>
         </v-col>

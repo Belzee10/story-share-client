@@ -3,7 +3,9 @@ import mutations from './mutations';
 
 const state = () => ({
   stories: [],
-  error: false
+  error: false,
+  popularStories: [],
+  errorPopular: false
 });
 
 export default {

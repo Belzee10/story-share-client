@@ -1,18 +1,20 @@
 <template>
-  <v-card flat class="story-card pa-0">
-    <v-container class="pa-0">
+  <v-card flat class="story-card">
+    <v-container class="">
       <v-row>
         <v-col cols="5" class="py-0">
           <v-img
             :src="image || require('~/assets/images/no-image.jpg')"
             :alt="title"
             :lazy-src="require('~/assets/images/image-loading.jpeg')"
-            height="200"
+            height="220"
           ></v-img>
         </v-col>
-        <v-col cols="7" class="py-0 d-flex flex-column">
+        <v-col cols="7" class="d-flex flex-column px-2">
           <span class="date accent--text text--darken-2">{{ formatDate }}</span>
-          <h3 class="title">{{ title | capitalizeFirstLetter }}</h3>
+          <h3 class="title">
+            {{ title | capitalizeFirstLetter }}
+          </h3>
           <p class="accent--text text--darken-4 font-weight-light content">
             {{ content | truncate(320) }}
           </p>

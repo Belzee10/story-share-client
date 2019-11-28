@@ -32,7 +32,7 @@ exports[`Navbar.vue should render correctly 1`] = `
           class="d-flex justify-end align-center col col-4"
         >
           <button
-            class="text-capitalize v-btn v-btn--contained theme--light v-size--default primary"
+            class="text-capitalize v-btn v-btn--depressed theme--light v-size--default primary"
             type="button"
           >
             <span
