@@ -1,6 +1,6 @@
 import Vue from 'vue';
 
-const truncate = (str, length, clamp) => {
+const truncate = (str, length = 250, clamp) => {
   if (!str) return '';
   const value = str.toString();
   return `${value.slice(0, length)}${clamp}`;
@@ -13,5 +13,5 @@ const capitalizeFirstLetter = str => {
   return `${first}${value.slice(1, value.length)}`;
 };
 
-Vue.filter('truncate', str => truncate(str, 250, '...'));
+Vue.filter('truncate', (str, length) => truncate(str, length, '...'));
 Vue.filter('capitalizeFirstLetter', str => capitalizeFirstLetter(str));

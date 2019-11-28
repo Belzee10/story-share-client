@@ -14,10 +14,12 @@
           <span class="date accent--text text--darken-2">{{ formatDate }}</span>
           <h3 class="title">{{ title | capitalizeFirstLetter }}</h3>
           <p class="accent--text text--darken-4 font-weight-light content">
-            {{ content | truncate }}
+            {{ content | truncate(320) }}
           </p>
           <div class="mt-auto d-flex">
-            <Author :name="`${author.name} ${author.lastName}`" />
+            <Author :name="`${author.name} ${author.lastName}`" class="mr-2" />
+            <Like v-if="likes > 0" :likes="likes" />
+            <v-btn depressed small color="primary" class="ml-auto"> Save</v-btn>
           </div>
         </v-col>
       </v-row>
@@ -28,10 +30,11 @@
 <script>
 import dayjs from 'dayjs';
 import Author from '~/components/Story/Author';
+import Like from '~/components/Story/Like';
 
 export default {
   name: 'StoryCard',
-  components: { Author },
+  components: { Author, Like },
   props: {
     title: {
       type: String,

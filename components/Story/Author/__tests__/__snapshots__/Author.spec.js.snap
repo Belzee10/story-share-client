@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Author.vue should render correctly 1`] = `
+<div
+  class="d-flex align-end"
+>
+  <div>
+    <div
+      aria-label=""
+      class="v-responsive v-image avatar"
+      style="height: 20px; width: 20px;"
+    >
+      <div
+        class="v-responsive__content"
+      />
+    </div>
+  </div>
+   
+  <span
+    class="text-capitalize ml-1 name accent--text text--darken-4"
+  >
+    
+  </span>
+</div>
+`;
