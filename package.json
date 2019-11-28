@@ -19,6 +19,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/dotenv": "^1.4.0",
+    "dayjs": "^1.8.17",
     "loglevel": "^1.6.6",
     "nuxt": "^2.0.0"
   },
