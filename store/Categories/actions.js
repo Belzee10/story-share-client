@@ -12,7 +12,6 @@ export default {
         categories
       });
     } catch (error) {
-      console.log(error);
       commit({
         type: SET_ERROR,
         error: true

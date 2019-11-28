@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar.vue should render correctly 1`] = `
+<div
+  class="container"
+>
+  <header
+    class="v-sheet v-sheet--tile theme--light v-toolbar v-toolbar--extended v-toolbar--flat v-app-bar"
+    style="height: 148px; margin-top: 0px; transform: translateY(0px); left: 0px; right: 0px;"
+  >
+    <div
+      class="v-toolbar__content"
+      style="height: 100px;"
+    >
+      <div
+        class="row"
+      >
+        <div
+          class="d-flex justify-center col col-4 offset-4"
+        >
+          <div
+            class="v-responsive v-image"
+            style="max-width: 180px;"
+          >
+            <div
+              class="v-responsive__content"
+            />
+          </div>
+        </div>
+         
+        <div
+          class="d-flex justify-end align-center col col-4"
+        >
+          <button
+            class="text-capitalize v-btn v-btn--contained theme--light v-size--default primary"
+            type="button"
+          >
+            <span
+              class="v-btn__content"
+            >
+              
+          Get Started
+        
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="v-toolbar__extension"
+      style="height: 48px;"
+    >
+      <div
+        class="row"
+      >
+        <div
+          class="d-flex justify-center py-2 col border"
+        >
+          <nuxt-link
+            class="category-link"
+            to="/"
+          >
+            
+            All
+          
+          </nuxt-link>
+          <nuxt-link
+            class="category-link"
+            to="name: 0"
+          >
+            
+            Name: 0
+          
+          </nuxt-link>
+          <nuxt-link
+            class="category-link"
+            to="name: 1"
+          >
+            
+            Name: 1
+          
+          </nuxt-link>
+          <nuxt-link
+            class="category-link"
+            to="name: 2"
+          >
+            
+            Name: 2
+          
+          </nuxt-link>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+`;

@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer.vue should render correctly 1`] = `
+<footer
+  class="v-footer d-flex justify-center v-sheet v-sheet--tile theme--light"
+>
+  <div
+    class="py-2"
+  >
+    <p
+      class="ma-0"
+    >
+      
+      Made with love by
+      
+      <a
+        href="#"
+      >
+        @belzee5
+      </a>
+    </p>
+  </div>
+</footer>
+`;

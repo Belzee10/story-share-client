@@ -20,7 +20,12 @@
             :class="getExtensionbarStyles"
             class="d-flex justify-center py-2"
           >
-            <nuxt-link v-for="item in getLinks" :key="item.id" :to="item.to">
+            <nuxt-link
+              v-for="item in getLinks"
+              :key="item.id"
+              :to="item.to"
+              class="category-link"
+            >
               {{ item.name }}
             </nuxt-link>
           </v-col>
@@ -31,25 +36,28 @@
 </template>
 
 <script>
+import { mapActions, mapState } from 'vuex';
+
 export default {
   name: 'Navbar',
-  props: {
-    links: {
-      type: Array,
-      default: () => []
-    }
-  },
   computed: {
+    ...mapState('Categories', ['categories']),
     getExtensionbarStyles() {
       return !this.$vuetify.theme.dark ? 'border' : '';
     },
     getLinks() {
-      const links = this.links.map(item => ({
+      const links = this.categories.map(item => ({
         ...item,
         to: item.name.toLowerCase()
       }));
       return [{ id: 'all', name: 'All', to: '/' }, ...links];
     }
+  },
+  mounted() {
+    this.getCategories();
+  },
+  methods: {
+    ...mapActions('Categories', ['getCategories'])
   }
 };
 </script>
