@@ -85,6 +85,7 @@ export default {
     },
     goToRegister() {
       this.$router.push({ name: 'register' });
+      this.closeModal();
     },
     handleSubmit(data) {}
   }
