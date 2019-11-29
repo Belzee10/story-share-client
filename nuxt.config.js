@@ -60,6 +60,9 @@ export default {
   vuetify: {
     optionsPath: './config/vuetify.options.js'
   },
+  router: {
+    linkExactActiveClass: 'primary--text'
+  },
   /*
    ** Build configuration
    */

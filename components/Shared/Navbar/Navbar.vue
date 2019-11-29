@@ -1,5 +1,12 @@
 <template>
   <v-container>
+    <Login
+      v-if="isModalOpen"
+      :isOpen="isModalOpen"
+      @close-modal="closeModal"
+      @go-to-register="goToRegister"
+      @submit="handleSubmit"
+    />
     <v-app-bar flat height="100">
       <v-row>
         <v-col cols="4" offset="4" class="d-flex justify-center">
@@ -11,7 +18,12 @@
           </NuxtLink>
         </v-col>
         <v-col cols="4" class="d-flex justify-end align-center">
-          <v-btn depressed color="primary" class="text-capitalize">
+          <v-btn
+            @click="openModal"
+            depressed
+            color="primary"
+            class="text-capitalize"
+          >
             Get Started
           </v-btn>
         </v-col>
@@ -39,9 +51,14 @@
 
 <script>
 import { mapActions, mapState } from 'vuex';
+import Login from '~/components/Shared/Login';
 
 export default {
   name: 'Navbar',
+  components: { Login },
+  data: () => ({
+    isModalOpen: false
+  }),
   computed: {
     ...mapState('Categories', ['categories']),
     getExtensionbarStyles() {
@@ -59,7 +76,17 @@ export default {
     this.getCategories();
   },
   methods: {
-    ...mapActions('Categories', ['getCategories'])
+    ...mapActions('Categories', ['getCategories']),
+    openModal() {
+      this.isModalOpen = true;
+    },
+    closeModal() {
+      this.isModalOpen = false;
+    },
+    goToRegister() {
+      this.$router.push({ name: 'register' });
+    },
+    handleSubmit(data) {}
   }
 };
 </script>

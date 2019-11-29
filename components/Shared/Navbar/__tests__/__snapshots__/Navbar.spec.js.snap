@@ -4,6 +4,8 @@ exports[`Navbar.vue should render correctly 1`] = `
 <div
   class="container"
 >
+  <!---->
+   
   <header
     class="v-sheet v-sheet--tile theme--light v-toolbar v-toolbar--extended v-toolbar--flat v-app-bar"
     style="height: 148px; margin-top: 0px; transform: translateY(0px); left: 0px; right: 0px;"
