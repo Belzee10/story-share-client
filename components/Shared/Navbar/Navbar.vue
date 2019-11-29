@@ -3,10 +3,12 @@
     <v-app-bar flat height="100">
       <v-row>
         <v-col cols="4" offset="4" class="d-flex justify-center">
-          <v-img
-            :src="require('~/assets/images/logo.png')"
-            max-width="180"
-          ></v-img>
+          <NuxtLink to="/">
+            <v-img
+              :src="require('~/assets/images/logo.png')"
+              max-width="180"
+            ></v-img>
+          </NuxtLink>
         </v-col>
         <v-col cols="4" class="d-flex justify-end align-center">
           <v-btn depressed color="primary" class="text-capitalize">

@@ -4,7 +4,9 @@ import {
   SET_POPULAR_STORIES,
   SET_POPULAR_ERROR,
   SET_STORY,
-  SET_STORY_ERROR
+  SET_STORY_ERROR,
+  SET_LOADING,
+  SET_LOADING_POPULAR
 } from './mutationTypes';
 
 export default {
@@ -30,5 +32,13 @@ export default {
 
   [SET_STORY_ERROR]: (state, { error }) => {
     state.errorStory = error;
+  },
+
+  [SET_LOADING]: (state, { loading }) => {
+    state.loading = loading;
+  },
+
+  [SET_LOADING_POPULAR]: (state, { loading }) => {
+    state.loadingPopularStories = loading;
   }
 };

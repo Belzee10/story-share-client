@@ -18,14 +18,18 @@ exports[`Navbar.vue should render correctly 1`] = `
         <div
           class="d-flex justify-center col col-4 offset-4"
         >
-          <div
-            class="v-responsive v-image"
-            style="max-width: 180px;"
+          <nuxtlink
+            to="/"
           >
             <div
-              class="v-responsive__content"
-            />
-          </div>
+              class="v-responsive v-image"
+              style="max-width: 180px;"
+            >
+              <div
+                class="v-responsive__content"
+              />
+            </div>
+          </nuxtlink>
         </div>
          
         <div

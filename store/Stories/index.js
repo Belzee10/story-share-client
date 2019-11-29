@@ -3,11 +3,13 @@ import mutations from './mutations';
 
 const state = () => ({
   stories: [],
-  error: false,
   popularStories: [],
-  errorPopular: false,
   story: null,
-  errorStory: false
+  error: false,
+  errorPopular: false,
+  errorStory: false,
+  loading: false,
+  loadingPopularStories: false
 });
 
 export default {
