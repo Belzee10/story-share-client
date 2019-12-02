@@ -8,8 +8,8 @@ const state = () => ({
   error: false,
   errorPopular: false,
   errorStory: false,
-  loading: false,
-  loadingPopularStories: false
+  loading: true,
+  loadingPopularStories: true
 });
 
 export default {

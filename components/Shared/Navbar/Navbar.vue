@@ -60,7 +60,7 @@ export default {
     isModalOpen: false
   }),
   computed: {
-    ...mapState('Categories', ['categories']),
+    ...mapState('Categories', ['categories'], 'Users', ['users']),
     getExtensionbarStyles() {
       return !this.$vuetify.theme.dark ? 'border' : '';
     },

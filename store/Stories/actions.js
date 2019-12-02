@@ -14,10 +14,6 @@ import { transformResponse } from '~/helpers';
 export default {
   async getStories({ commit }) {
     try {
-      commit({
-        type: SET_LOADING,
-        loading: true
-      });
       const { result } = await this.$axios.$get('/stories');
       const stories = result.map(item => transformResponse(item));
       commit({
@@ -40,10 +36,6 @@ export default {
 
   async getPopularStories({ commit }) {
     try {
-      commit({
-        type: SET_LOADING_POPULAR,
-        loading: true
-      });
       const { result } = await this.$axios.$get('/stories/popular');
       const stories = result.map(item => transformResponse(item));
       commit({

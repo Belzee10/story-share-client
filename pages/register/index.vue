@@ -61,6 +61,8 @@
 </template>
 
 <script>
+import { mapActions, mapState } from 'vuex';
+
 export default {
   layout: 'front',
   data: () => ({
@@ -77,9 +79,19 @@ export default {
     ],
     passwordRules: [v => !!v || 'Password is required']
   }),
+  computed: {
+    ...mapState('Users', ['user'])
+  },
   methods: {
+    ...mapActions('Users', ['register']),
     handleRegister() {
       if (this.$refs.form.validate()) {
+        this.register({
+          name: this.name,
+          lastName: this.lastName,
+          email: this.email,
+          password: this.password
+        });
       }
     }
   }

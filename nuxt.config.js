@@ -20,7 +20,7 @@ export default {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
+  loading: { color: 'black' },
   /*
    ** Global CSS
    */
@@ -60,6 +60,7 @@ export default {
   vuetify: {
     optionsPath: './config/vuetify.options.js'
   },
+
   router: {
     linkExactActiveClass: 'primary--text'
   },
