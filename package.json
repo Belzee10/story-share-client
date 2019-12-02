@@ -17,12 +17,12 @@
     "analyze": "nuxt build --analyze"
   },
   "dependencies": {
+    "@nuxtjs/auth": "^4.8.4",
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/dotenv": "^1.4.0",
     "dayjs": "^1.8.17",
     "loglevel": "^1.6.6",
-    "nuxt": "^2.0.0",
-    "nuxt-storage": "^1.2.2"
+    "nuxt": "^2.0.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^1.0.1",
